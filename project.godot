@@ -11,12 +11,12 @@ config_version=4
 [application]
 
 config/name="Networking"
-run/main_scene="res://Network_setup.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Menu/Network_setup.tscn"
+config/icon="res://Resources/Images/icon.png"
 
 [autoload]
 
-Network="*res://Network.gd"
+Network="*res://Scripts/Network.gd"
 
 [display]
 
