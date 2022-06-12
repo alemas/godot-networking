@@ -23,6 +23,8 @@ func _ready() -> void:
 	
 	for i in IP.get_local_interfaces():
 		var interfaceDescription = i["name"] + ": "
+		if i["friendly"] != "":
+			interfaceDescription = i["friendly"] + ": "
 		for ip in i["addresses"]:
 			interfaceDescription += "\n\t" + ip
 		_print_to_console(interfaceDescription)
