@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Menu/Network_setup.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Fonts/Base_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/Menu/Logger/LoggerInterface.tscn" type="PackedScene" id=3]
 
 [node name="Network_setup" type="Control"]
 anchor_right = 1.0
@@ -26,7 +27,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Create_server" type="Button" parent="Multiplayer_configure"]
+[node name="Host_server" type="Button" parent="Multiplayer_configure"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -37,7 +38,7 @@ margin_right = 250.0
 margin_bottom = -39.0
 rect_pivot_offset = Vector2( -1872, -527 )
 custom_fonts/font = ExtResource( 2 )
-text = "Create Server"
+text = "Host Server"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -73,6 +74,12 @@ __meta__ = {
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Logger" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 1366.0
+margin_top = 334.0
+margin_right = 1800.0
+margin_bottom = 918.0
+
 [node name="Device_ip_address" type="Label" parent="CanvasLayer"]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -98,5 +105,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="button_up" from="Multiplayer_configure/Create_server" to="." method="_on_Create_server_button_up"]
+[connection signal="button_up" from="Multiplayer_configure/Host_server" to="." method="_on_Host_server_button_up"]
 [connection signal="button_up" from="Multiplayer_configure/Join_server" to="." method="_on_Join_server_button_up"]

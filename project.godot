@@ -17,6 +17,7 @@ config/icon="res://Resources/Images/icon.png"
 [autoload]
 
 Network="*res://Scripts/Network.gd"
+Logger="*res://Scripts/Logger.gd"
 
 [display]
 
