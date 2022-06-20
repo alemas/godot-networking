@@ -18,6 +18,7 @@ config/icon="res://Resources/Images/icon.png"
 
 Network="*res://Scripts/Network.gd"
 Logger="*res://Scripts/Logger.gd"
+Colors="*res://Scripts/Colors.gd"
 
 [display]
 

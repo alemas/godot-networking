@@ -1,0 +1,147 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Fonts/GameTitleFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Menu/Start Menu/StartMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Menu/UI Elements/Menu Button/MenuButton.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0.2475, 0.33, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.765, 0.844333, 0.85, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.2475, 0.33, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.765, 0.844333, 0.85, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0.2475, 0.33, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.765, 0.844333, 0.85, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0.2475, 0.33, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.765, 0.844333, 0.85, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.53, 0.81, 0.98, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+margin_top = 100.0
+margin_right = -500.0
+margin_bottom = -560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 920.0
+margin_bottom = 675.0
+custom_constants/separation = 50
+
+[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 920.0
+margin_bottom = 245.0
+custom_colors/font_color = Color( 1, 0.981667, 0.9, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "The Game"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 295.0
+margin_right = 920.0
+margin_bottom = 675.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 310.0
+margin_right = 610.0
+margin_bottom = 380.0
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="JoinButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 300.0
+margin_bottom = 80.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Join Server"
+
+[node name="HostButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 100.0
+margin_right = 300.0
+margin_bottom = 180.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Host Server"
+
+[node name="PlaySoloButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 280.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
+custom_styles/normal = SubResource( 3 )
+text = "Play Solo"
+
+[node name="QuitButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 300.0
+margin_right = 300.0
+margin_bottom = 380.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
+custom_styles/normal = SubResource( 4 )
+text = "Quit"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_button_up"]

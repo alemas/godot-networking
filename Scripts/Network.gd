@@ -58,7 +58,7 @@ func join_server() -> int:
 		get_tree().set_network_peer(peer)
 		Logger.log_network("Joining Server", Logger.MessageStyle.Success)
 	else:
-		Logger.log_network("Failed to join server at " + ip_address + ". Status" + str(status), Logger.MessageStyle.Error)
+		Logger.log_network("Failed to connect to server " + ip_address + ". Status" + str(status), Logger.MessageStyle.Error)
 	return status
 
 func reset_network_connection():

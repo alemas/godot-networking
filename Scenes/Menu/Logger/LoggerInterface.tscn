@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Menu/Logger/LoggerInterface.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Fonts/Base_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/Fonts/BaseFont.tres" type="DynamicFont" id=2]
 
 [node name="Logger" type="RichTextLabel"]
-margin_right = 434.0
-margin_bottom = 507.0
+margin_right = 107.0
+margin_bottom = 103.0
 focus_mode = 2
 custom_fonts/normal_font = ExtResource( 2 )
 scroll_following = true
