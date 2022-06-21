@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/Menu/Logger/LoggerInterface.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI Elements/Logger/LoggerInterface.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Fonts/BaseFont.tres" type="DynamicFont" id=2]
 
 [node name="Logger" type="RichTextLabel"]

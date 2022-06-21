@@ -1,52 +1,148 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Resources/Fonts/GameTitleFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scenes/Menu/Start Menu/StartMenu.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Menu/UI Elements/Menu Button/MenuButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI Elements/Menu Button/MenuButton.tscn" type="PackedScene" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0.2475, 0.33, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.765, 0.844333, 0.85, 1 )
+bg_color = Color( 0, 0.176, 0.33, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0.2475, 0.33, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.765, 0.844333, 0.85, 1 )
+bg_color = Color( 0.062745, 0.521569, 0.764706, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0.2475, 0.33, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.765, 0.844333, 0.85, 1 )
+bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0, 0.2475, 0.33, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.765, 0.844333, 0.85, 1 )
+bg_color = Color( 0, 0.176, 0.33, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.062745, 0.521569, 0.764706, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0.176, 0.33, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.062745, 0.521569, 0.764706, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0.176, 0.33, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.062745, 0.521569, 0.764706, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -89,6 +185,7 @@ custom_constants/separation = 50
 [node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 920.0
 margin_bottom = 245.0
+rect_pivot_offset = Vector2( 460, 127.5 )
 custom_colors/font_color = Color( 1, 0.981667, 0.9, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "The Game"
@@ -113,7 +210,9 @@ custom_constants/separation = 20
 margin_right = 300.0
 margin_bottom = 80.0
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
 custom_styles/normal = SubResource( 1 )
 text = "Join Server"
 
@@ -122,8 +221,10 @@ margin_top = 100.0
 margin_right = 300.0
 margin_bottom = 180.0
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 4 )
 text = "Host Server"
 
 [node name="PlaySoloButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
@@ -131,8 +232,11 @@ margin_top = 200.0
 margin_right = 300.0
 margin_bottom = 280.0
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 7 )
+disabled = true
 text = "Play Solo"
 
 [node name="QuitButton" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer" instance=ExtResource( 3 )]
@@ -140,8 +244,10 @@ margin_top = 300.0
 margin_right = 300.0
 margin_bottom = 380.0
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.765, 0.844333, 0.85, 1 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
 text = "Quit"
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_button_up"]

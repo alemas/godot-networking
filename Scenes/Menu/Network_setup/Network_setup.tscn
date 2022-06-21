@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/Menu/Network_setup.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Fonts/BaseFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Scenes/Menu/Logger/LoggerInterface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI Elements/Logger/LoggerInterface.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Menu/Network_setup/Network_setup.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Fonts/BaseFont.tres" type="DynamicFont" id=3]
 
 [node name="Network_setup" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -37,7 +37,7 @@ margin_top = -189.0
 margin_right = 250.0
 margin_bottom = -39.0
 rect_pivot_offset = Vector2( -1872, -527 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Host Server"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,7 +52,7 @@ margin_left = -250.0
 margin_right = 250.0
 margin_bottom = 150.0
 rect_pivot_offset = Vector2( -1872, -527 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Join Server"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -65,7 +65,7 @@ margin_left = -450.0
 margin_top = 111.0
 margin_right = 450.0
 margin_bottom = 211.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 align = 1
 placeholder_text = "Enter IP Address"
 __meta__ = {
@@ -74,7 +74,7 @@ __meta__ = {
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Logger" parent="CanvasLayer" instance=ExtResource( 3 )]
+[node name="Logger" parent="CanvasLayer" instance=ExtResource( 1 )]
 margin_left = 52.0
 margin_top = 96.0
 margin_right = 467.0
@@ -85,7 +85,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -150.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 align = 1
 valign = 1
 __meta__ = {

@@ -23,3 +23,8 @@ func _ready():
 	
 #	self.add_stylebox_override("focus", normal_style)
 	self.add_color_override("font_color_focus", Colors.menu_button_font_highlighted)
+	
+	var disabled_style = normal_style.duplicate()
+	disabled_style.bg_color = Colors.menu_button_background_disabled
+	self.add_stylebox_override("disabled", disabled_style)
+	self.add_color_override("font_color_disabled", Colors.menu_button_font_disabled)
