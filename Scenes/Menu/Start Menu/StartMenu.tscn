@@ -210,6 +210,7 @@ custom_constants/separation = 20
 margin_right = 300.0
 margin_bottom = 80.0
 size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/disabled = SubResource( 3 )
@@ -221,6 +222,7 @@ margin_top = 100.0
 margin_right = 300.0
 margin_bottom = 180.0
 size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/disabled = SubResource( 6 )
@@ -232,6 +234,7 @@ margin_top = 200.0
 margin_right = 300.0
 margin_bottom = 280.0
 size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/disabled = SubResource( 9 )
@@ -244,10 +247,13 @@ margin_top = 300.0
 margin_right = 300.0
 margin_bottom = 380.0
 size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/disabled = SubResource( 12 )
 custom_styles/normal = SubResource( 10 )
 text = "Quit"
 
+[connection signal="button_up" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/JoinButton" to="." method="_on_JoinButton_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/HostButton" to="." method="_on_HostButton_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_button_up"]

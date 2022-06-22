@@ -21,7 +21,6 @@ func _on_Host_server_button_up():
 
 func _on_Join_server_button_up():
 	if server_ip_address.text != "":
-		Network.ip_address = server_ip_address.text
-		var status = Network.join_server()
+		var status = Network.join_server(server_ip_address.text)
 		if status == OK:
 			multiplayer_config_ui.hide()

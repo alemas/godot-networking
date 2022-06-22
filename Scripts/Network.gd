@@ -6,7 +6,6 @@ const MAX_CLIENTS = 16
 var peer = NetworkedMultiplayerENet.new()
 var connections_count = 0
 
-var ip_address = "127.0.0.1"
 var players = {}
 
 # Custom signals
@@ -14,9 +13,6 @@ var players = {}
 signal added_new_player(new_player)
 
 func _ready() -> void:
-	for ip in IP.get_local_addresses():
-		if ip.begins_with("192.168.") and not ip.ends_with(".1"):
-			ip_address = ip
 	
 	# Executes on the client side
 	get_tree().connect("connected_to_server", self, "_connected_to_server")
@@ -52,7 +48,7 @@ func create_server() -> int:
 	return status
 
 ## Returns OK if the connection was succesfully established
-func join_server() -> int:
+func join_server(ip_address: String) -> int:
 	var status = peer.create_client(ip_address, DEFAULT_PORT)
 	if status == OK:
 		get_tree().set_network_peer(peer)
@@ -83,7 +79,6 @@ func _failed_to_connect() -> void:
 
 func _server_disconnected() -> void:
 	Logger.log_network("Disconnected from the server", Logger.MessageStyle.Warning)
-	ip_address = ""
 	reset_network_connection()
 
 	# CLIENT & SERVER SIDE

@@ -17,6 +17,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func _on_JoinButton_button_up() -> void:
+	SceneSwitcher.change_to_scene("res://Scenes/Menu/Join Server Menu/JoinServerMenu.tscn")
+
+func _on_HostButton_button_up() -> void:
+	SceneSwitcher.change_to_scene("res://Scenes/Menu/Lobby Menu/LobbyMenu.tscn", {"will_be_server": true})
 
 func _on_QuitButton_button_up() -> void:
 	get_tree().notification(MainLoop.NOTIFICATION_WM_QUIT_REQUEST)
