@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/UI Elements/Logger/LoggerInterface.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Menu/Network_setup/Network_setup.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Fonts/BaseFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Fonts/BaseFontSize20.tres" type="DynamicFont" id=3]
 
 [node name="Network_setup" type="Control"]
 anchor_right = 1.0

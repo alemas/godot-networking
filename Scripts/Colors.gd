@@ -8,9 +8,9 @@ const menu_line_edit_font = Color.white
 
 const menu_button_background = Color(0, 0.176, 0.33)
 const menu_button_background_highlighted = Color(0.062745, 0.521569, 0.764706)
-const menu_button_background_disabled = Color(0.2226, 0.32788, 0.42)
+const menu_button_background_disabled = Color(0.1554, 0.29652, 0.42)
 #const menu_button_font = Color(0.765, 0.844333, 0.85)
 const menu_button_font = Color.white
 const menu_button_font_highlighted = Color.white
-const menu_button_font_disabled = Color(0.54, 0.596, 0.6)
+const menu_button_font_disabled = Color(0.612, 0.675467, 0.68)
 const menu_button_border = Color.white

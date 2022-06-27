@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Fonts/BaseFontSize20.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/UI Elements/Logger/LoggerInterfaceV2.gd" type="Script" id=2]
+
+[node name="LoggerInterfaceV2" type="MarginContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 200 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 200.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.096, 0.18, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 200.0
+margin_bottom = 200.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoggerTextLabel" type="RichTextLabel" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 180.0
+margin_bottom = 180.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/selection_color = Color( 0.427451, 0.678431, 0.756863, 0.709804 )
+custom_fonts/normal_font = ExtResource( 1 )
+scroll_following = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

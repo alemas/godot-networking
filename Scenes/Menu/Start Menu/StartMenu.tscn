@@ -29,7 +29,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+bg_color = Color( 0.1554, 0.29652, 0.42, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -65,7 +65,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+bg_color = Color( 0.1554, 0.29652, 0.42, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -101,7 +101,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+bg_color = Color( 0.1554, 0.29652, 0.42, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -137,7 +137,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.2226, 0.32788, 0.42, 1 )
+bg_color = Color( 0.1554, 0.29652, 0.42, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -186,7 +186,7 @@ custom_constants/separation = 50
 margin_right = 920.0
 margin_bottom = 245.0
 rect_pivot_offset = Vector2( 460, 127.5 )
-custom_colors/font_color = Color( 1, 0.981667, 0.9, 1 )
+custom_colors/font_color = Color( 1, 0.980392, 0.901961, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "The Game"
 align = 1
@@ -210,6 +210,7 @@ custom_constants/separation = 20
 margin_right = 300.0
 margin_bottom = 80.0
 size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.612, 0.675467, 0.68, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -222,6 +223,7 @@ margin_top = 100.0
 margin_right = 300.0
 margin_bottom = 180.0
 size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.612, 0.675467, 0.68, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
@@ -234,6 +236,7 @@ margin_top = 200.0
 margin_right = 300.0
 margin_bottom = 280.0
 size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.612, 0.675467, 0.68, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
@@ -247,6 +250,7 @@ margin_top = 300.0
 margin_right = 300.0
 margin_bottom = 380.0
 size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.612, 0.675467, 0.68, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 10 )
 custom_styles/pressed = SubResource( 11 )

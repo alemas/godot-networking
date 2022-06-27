@@ -11,6 +11,7 @@ var players = {}
 # Custom signals
 
 signal added_new_player(new_player)
+signal removed_player(player)
 
 func _ready() -> void:
 	
@@ -24,7 +25,7 @@ func _ready() -> void:
 	get_tree().connect("network_peer_disconnected", self, "_network_peer_disconnected")
 	
 func is_server() -> bool:
-	return get_tree().is_network_server()
+	return get_tree().is_network_server()	
 
 func get_local_addresses_description() -> String:
 	var description = "Available addresses: "
@@ -44,8 +45,21 @@ func create_server() -> int:
 		get_tree().set_network_peer(peer)
 		Logger.log_network("Started local server", Logger.MessageStyle.Success)
 	else:
-		Logger.log_network("Failed to create local server. Status" + str(status), Logger.MessageStyle.Error)
+		Logger.log_network("Failed to create local server. Status " + str(status), Logger.MessageStyle.Error)
+		reset_network_connection()
 	return status
+
+## TODO: Needs to first disconnect and alert all connected players
+func stop_server():
+	if is_server():
+		## Alert everyone the server is about to shutdown
+		reset_network_connection()
+
+## TODO: Needs to alert the server that the player is disconnecting
+func disconnect_from_server():
+	if get_tree().network_peer != null and not is_server():
+		## Alert server
+		reset_network_connection()
 
 ## Returns OK if the connection was succesfully established
 func join_server(ip_address: String) -> int:
@@ -54,7 +68,8 @@ func join_server(ip_address: String) -> int:
 		get_tree().set_network_peer(peer)
 		Logger.log_network("Joining Server", Logger.MessageStyle.Success)
 	else:
-		Logger.log_network("Failed to connect to server " + ip_address + ". Status" + str(status), Logger.MessageStyle.Error)
+		Logger.log_network("Failed to connect to server " + ip_address + ". Status " + str(status), Logger.MessageStyle.Error)
+		reset_network_connection()
 	return status
 
 func reset_network_connection():
@@ -65,6 +80,7 @@ remote func register_player(player_info) -> void:
 	var id = get_tree().get_rpc_sender_id()
 	players[id] = player_info
 	emit_signal("added_new_player", player_info)
+	Logger.log_debug("Added new player triggered:\n" + str(player_info) + "\nSender: " + str(id))
 
 # --------------------------------> SIGNALS
 
