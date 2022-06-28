@@ -1,8 +1,7 @@
 tool
 extends Control
 
-onready var lblGameTitle = $MarginContainer/VBoxContainer/GameTitle
-onready var rctBackground = $Background
+onready var background_rect = $Background
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,7 +10,7 @@ onready var rctBackground = $Background
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rctBackground.color = Colors.menu_background
+	background_rect.color = Colors.menu_background
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

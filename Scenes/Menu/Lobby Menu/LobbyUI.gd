@@ -12,20 +12,20 @@ func _ready() -> void:
 	Network.connect("removed_player", self, "_update_players_text_label")
 	_update_players_text_label()
 
-func _update_players_text_label():
+func _update_players_text_label(player_info = null):
 	var text = "Connected Players:"
 	
-	for playerId in Network.players.keys():
-		var player = Network.players[playerId]
-		text += "\n" + str(player["name"])
+	for player in Network.get_players().values():
+		text += "\n" + str(player.username)
 		
 	players_text_label.text = text
 
 func _on_LobbyUI_visibility_changed() -> void:
 	if self.is_visible_in_tree():
 		_update_players_text_label()
-
-
+		if not Network.is_server():
+			start_game_button.hide()
+			
 func _on_BackButton_button_up() -> void:
 	if Network.is_server():
 		Network.stop_server()

@@ -28,4 +28,5 @@ func _on_StartButton_button_up() -> void:
 	connection_error_label.hide()
 	var player_name = player_name_line_edit.text.strip_edges(true, true)
 	if player_name.length() > 0:
+		Player.username = player_name
 		_start_server()

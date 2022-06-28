@@ -20,6 +20,7 @@ Network="*res://Scripts/Network.gd"
 Logger="*res://Scripts/Logger.gd"
 Colors="*res://Scripts/Colors.gd"
 SceneSwitcher="*res://Scripts/SceneSwitcher.gd"
+Player="*res://Scripts/Player.gd"
 
 [display]
 

@@ -33,6 +33,7 @@ func _on_JoinButton_button_up() -> void:
 	if player_name.length() > 0 and server_ip_line_edit.text.length() > 0:
 		var ip_address = server_ip_line_edit.text
 		_join_server(ip_address)
+		Player.username = player_name
 
 func _on_BackButton_button_up() -> void:
 	SceneSwitcher.change_to_scene("res://Scenes/Menu/Start Menu/StartMenu.tscn")

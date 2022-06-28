@@ -37,6 +37,11 @@ func get_local_addresses_description() -> String:
 			interfaceDescription += "\n\t" + ip
 		description += interfaceDescription
 	return description
+	
+func get_players() -> Dictionary:
+	var all_players = players.duplicate()
+	all_players[peer.get_unique_id()] = Player.get_info()
+	return all_players
 
 ## Returns OK if the server was successfuly created
 func create_server() -> int:
@@ -57,7 +62,7 @@ func stop_server():
 
 ## TODO: Needs to alert the server that the player is disconnecting
 func disconnect_from_server():
-	if get_tree().network_peer != null and not is_server():
+	if not is_server():
 		## Alert server
 		reset_network_connection()
 
@@ -75,6 +80,9 @@ func join_server(ip_address: String) -> int:
 func reset_network_connection():
 	if get_tree().has_network_peer():
 		get_tree().set_network_peer(null)
+		peer = NetworkedMultiplayerENet.new()
+		players = {}
+		connections_count = 0
 
 remote func register_player(player_info) -> void:
 	var id = get_tree().get_rpc_sender_id()
@@ -101,11 +109,9 @@ func _server_disconnected() -> void:
 
 func _network_peer_connected(id) -> void:
 	Logger.log_network("Peer " + str(id) + " has connected", Logger.MessageStyle.Success)
-	var player_info = {
-		'name': id
-	}
+	
 	# Register player to players
-	rpc_id(id, 'register_player', player_info)
+	rpc_id(id, 'register_player', Player.get_info())
 	if is_server():
 		connections_count += 1
 	
