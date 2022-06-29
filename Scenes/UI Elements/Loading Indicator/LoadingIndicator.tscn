@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Images/Menu UI/Loading Indicator/LoadingSpriteFrames.tres" type="SpriteFrames" id=1]
+
+[node name="LoadingIndicator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1870.0
+margin_bottom = -1030.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 25, 25 )
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 1 )
+frame = 14
+playing = true

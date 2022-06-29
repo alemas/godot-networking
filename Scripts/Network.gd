@@ -117,6 +117,8 @@ func _network_peer_connected(id) -> void:
 	
 func _network_peer_disconnected(id) -> void:
 	Logger.log_network("Peer " + str(id) + " disconnected", Logger.MessageStyle.Warning)
+	var player = players[id]
 	players.erase(id)
+	emit_signal("removed_player", player)
 	if is_server():
 		connections_count -= 1

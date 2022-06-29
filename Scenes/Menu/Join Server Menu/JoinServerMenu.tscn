@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Menu/Join Server Menu/JoinServerMenu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI Elements/Menu Line Edit/MenuLineEdit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/UI Elements/Menu Button/MenuButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/Fonts/MenuLineEditFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scenes/UI Elements/Loading Indicator/LoadingIndicator.tscn" type="PackedScene" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.176, 0.33, 1 )
@@ -81,17 +82,18 @@ corner_radius_bottom_left = 10
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="ColorRect" parent="."]
 margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.53, 0.81, 0.98, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="LoadingIndicator" parent="Background" instance=ExtResource( 5 )]
+visible = false
+margin_left = 930.0
+margin_top = 420.0
+margin_right = -940.0
+margin_bottom = -610.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_left = 0.5
