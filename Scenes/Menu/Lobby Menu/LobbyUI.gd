@@ -1,6 +1,5 @@
 extends MarginContainer
 
-onready var logger = $HBoxContainer/LoggerBackground/Logger
 onready var players_text_label = $HBoxContainer/VBoxContainer/PlayersTextLabel
 onready var back_button = $HBoxContainer/VBoxContainer/HBoxContainer/BackButton
 onready var start_game_button = $HBoxContainer/VBoxContainer/HBoxContainer/StartGameButton

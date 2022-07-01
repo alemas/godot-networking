@@ -79,7 +79,7 @@ func join_server(ip_address: String) -> int:
 
 func reset_network_connection():
 	if get_tree().has_network_peer():
-		get_tree().set_network_peer(null)
+		get_tree().network_peer = null
 		peer = NetworkedMultiplayerENet.new()
 		players = {}
 		connections_count = 0
@@ -88,7 +88,8 @@ remote func register_player(player_info) -> void:
 	var id = get_tree().get_rpc_sender_id()
 	players[id] = player_info
 	emit_signal("added_new_player", player_info)
-	Logger.log_debug("Added new player triggered:\n" + str(player_info) + "\nSender: " + str(id))
+#	Logger.log_debug("Added new player triggered:\n" + str(player_info) + "\nSender: " + str(id))
+	Logger.log_network("Player " + player_info.username + " has joined", Logger.MessageStyle.Success)
 
 # --------------------------------> SIGNALS
 
@@ -108,7 +109,7 @@ func _server_disconnected() -> void:
 	# CLIENT & SERVER SIDE
 
 func _network_peer_connected(id) -> void:
-	Logger.log_network("Peer " + str(id) + " has connected", Logger.MessageStyle.Success)
+#	Logger.log_network("Peer " + str(id) + " has connected", Logger.MessageStyle.Success)
 	
 	# Register player to players
 	rpc_id(id, 'register_player', Player.get_info())
@@ -116,9 +117,10 @@ func _network_peer_connected(id) -> void:
 		connections_count += 1
 	
 func _network_peer_disconnected(id) -> void:
-	Logger.log_network("Peer " + str(id) + " disconnected", Logger.MessageStyle.Warning)
+#	Logger.log_network("Peer " + str(id) + " disconnected", Logger.MessageStyle.Warning)
 	var player = players[id]
 	players.erase(id)
 	emit_signal("removed_player", player)
 	if is_server():
 		connections_count -= 1
+	Logger.log_network("Player " + player.username + " has disconnected", Logger.MessageStyle.Warning)
