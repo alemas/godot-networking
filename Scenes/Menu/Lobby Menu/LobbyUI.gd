@@ -16,6 +16,8 @@ func _update_players_text_label(player_info = null):
 	
 	for player in Network.get_players().values():
 		text += "\n" + str(player.username)
+		if Player.username == player.username:
+			text += " (you)"
 		
 	players_text_label.text = text
 
@@ -31,3 +33,6 @@ func _on_BackButton_button_up() -> void:
 	else:
 		Network.disconnect_from_server()
 	SceneSwitcher.change_to_scene("res://Scenes/Menu/Start Menu/StartMenu.tscn")
+
+func _on_StartGameButton_button_up():
+	GameManager.start_game()

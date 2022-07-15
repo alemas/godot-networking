@@ -324,3 +324,4 @@ text = "Start Game"
 [connection signal="button_up" from="PreServerSetupUI/VBoxContainer/CenterContainer/VBoxContainer/BackButton" to="PreServerSetupUI" method="_on_BackButton_button_up"]
 [connection signal="visibility_changed" from="LobbyUI" to="LobbyUI" method="_on_LobbyUI_visibility_changed"]
 [connection signal="button_up" from="LobbyUI/HBoxContainer/VBoxContainer/HBoxContainer/BackButton" to="LobbyUI" method="_on_BackButton_button_up"]
+[connection signal="button_up" from="LobbyUI/HBoxContainer/VBoxContainer/HBoxContainer/StartGameButton" to="LobbyUI" method="_on_StartGameButton_button_up"]

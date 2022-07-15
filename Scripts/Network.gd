@@ -26,6 +26,9 @@ func _ready() -> void:
 	
 func is_server() -> bool:
 	return get_tree().is_network_server()	
+	
+func get_net_id() -> int:
+	return get_tree().get_network_unique_id()
 
 func get_local_addresses_description() -> String:
 	var description = "Available addresses: "
